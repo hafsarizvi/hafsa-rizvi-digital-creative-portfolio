@@ -225,3 +225,46 @@ footer .wm{width:auto}
 .chips{margin-top:1.4rem}
 @media(max-width:900px){.dhero{flex-direction:column;align-items:flex-start}.fan{width:min(80vw,320px);height:min(70vw,300px);margin:0 auto}.fm4{grid-template-columns:1fr 1fr}.pr3{grid-template-columns:1fr}nav ul{overflow-x:auto;scrollbar-width:none;gap:.9rem}nav ul::-webkit-scrollbar{display:none}}
 @media(max-width:560px){.fm4{grid-template-columns:1fr}}
+
+/* ===== MOBILE FIXES ===== */
+html{-webkit-text-size-adjust:100%}
+.cv{max-width:min(380px,100%)}
+.wm2 .lg{font-size:clamp(90px,14vw,170px)}
+.wm2{opacity:.07}
+
+@media (max-width:900px){
+  /* navigation: logo on top, links in a neat row underneath */
+  nav{padding:.6rem 3vw}
+  .pill{flex-direction:column;align-items:center;gap:.35rem;border-radius:26px;padding:.6rem .9rem .7rem}
+  .wm{display:none!important}
+  nav ul{width:100%;justify-content:center;flex-wrap:wrap;gap:.2rem .95rem;overflow:visible}
+  nav ul li:first-child{display:none}
+  nav a.l{font-size:.66rem;letter-spacing:.12em;padding:.35rem 0}
+
+  /* hero */
+  .hero{padding:9rem 6vw 3rem}
+  .name{font-size:clamp(4.2rem,21vw,6.5rem)}
+  .role{font-size:.7rem;letter-spacing:.2em;gap:.8rem}
+  .role::before{width:2rem}
+  .lead{font-size:.95rem}
+  .cta{margin-left:0}
+
+  /* spacing and type */
+  h1.t,h2.t{font-size:clamp(1.8rem,7.4vw,2.4rem)}
+  .big{font-size:clamp(1.5rem,6.4vw,2rem)}
+  .page{padding:8.5rem 6vw 3rem}
+  .fin{padding:3.5rem 6vw}
+  .chips{gap:.45rem}
+  .lbs{height:auto;width:100%}
+  .lbs.landscape{width:100%}
+  footer{flex-direction:column;align-items:flex-start;gap:1rem;padding:2rem 6vw}
+  footer div{flex-wrap:wrap;gap:.6rem 1.2rem}
+}
+@media (max-width:420px){
+  .cap{display:none}
+  .pmc{padding:2.2rem 1.4rem}
+}
+
+/* small glowing dot on the hero curve: hidden until its animation starts */
+.sw circle:not(.end){opacity:0;animation:dotin .01s 4.5s forwards}
+@keyframes dotin{to{opacity:.9}}
